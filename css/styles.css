@@ -41,13 +41,36 @@ a:visited {
 a:hover {
 	color: #909090 ;
 }
-
+@font-face {
+	font-family: myWebFont;
+	src: url(../fonts/karlsenThin.otf);
+}
+div{
+	font-family: myWebFont;
+	font-weight: 200;
+}
 #logo img {
 	max-height: 100%;
 }
 
-#topNav ul {
-	border-bottom: solid 1px #fbb040;
+#topNav li {
+	position: relative;
+	top: 40px;
+	border-bottom: 3px solid #fbb040;
+}
+
+.pageWrap {
+	border-top: 2px solid #fbb040;
+	border-bottom: 2px solid #fbb040;
+}
+
+li img {
+	border: 2px solid #ccc;
+	border-radius: 20px;
+}
+
+.resume a:hover {
+	background-color: #ccc;
 }
 
 header {
