@@ -28,6 +28,8 @@
     clear: both;
     display: block;
 }
+/********************/
+
 
 a {
 	text-decoration: none;
@@ -45,9 +47,20 @@ a:hover {
 	font-family: myWebFont;
 	src: url(../fonts/karlsenThin.otf);
 }
-div{
+div {
 	font-family: myWebFont;
 	font-weight: 200;
+}
+footer {
+	font-family: myWebFont;
+	font-weight: 200;
+}
+img {
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
 }
 #logo img {
 	max-height: 100%;
@@ -59,22 +72,34 @@ div{
 	border-bottom: 3px solid #fbb040;
 }
 
-.pageWrap {
+.contentWrap {
 	border-top: 2px solid #fbb040;
-	border-bottom: 2px solid #fbb040;
+}
+.btmContent {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 2px solid #fbb040;
 }
 
-li img {
+.resume li img {
 	border: 2px solid #ccc;
 	border-radius: 20px;
+	display: center;
 }
-
-.resume a:hover {
-	background-color: #ccc;
-}
-
 header {
 	clear: both;
 }
+footer p {
+	font-size: .75em;
+}
+footer {
+	border-top: 2px solid #fbb040;
+}
 
-.activePage {border: solid 3px #000;}
+/******* Artwork ***************/
+.artDivide {
+	border-bottom: 2px solid #fbb040;
+}
+.activePage a {
+	border: solid 3px black;
+}

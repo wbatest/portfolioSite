@@ -1,4 +1,4 @@
-<div class="pageWrap">	
+<div class="contentWrap">	
 	<div class="row resume">
 		<ul>
 			<li class="col-3"><img src="img/rmyc.png"></li>
