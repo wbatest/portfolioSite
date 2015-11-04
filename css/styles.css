@@ -257,10 +257,10 @@ section.jobs article img {
 		border-top-right-radius: 5px;
 		background-color: #777;
 	}
-	ul#topNav a:hover {
+	ul#topNav a {
 		color: white;
 	}
-	
+
 	section.iconHouse img{
 		width: 100px;
 		height: 100px;
