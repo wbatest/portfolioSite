@@ -6,18 +6,13 @@
 
 <div class="row btmContent">
 
-	<div class="col-1">&nbsp;</div>
-	<ul class="col-2">
-		<li><a href="#"><img src="img/iconComp.png" alt="Computer Icon"></a></li>
-		<li><a href="#"><img src="img/iconPen.png" alt="Computer Icon"></a></li>
-	</ul>
-
-	<ul class="col-2">
-		<li><a href="#"><img src="img/iconPhoto.png" alt="Computer Icon"></a></li>
-		<li><a href="#"><img src="img/iconPaint.png" alt="Computer Icon"></a></li>
-	</ul>
-	<div class="col-1">&nbsp;</div>
-
-	<div class="col-6">&nbsp;</div>
+	<section class="iconHouse">
+		<article class="iconMobile">
+			<a href="#"><img class="homeIcons" src="img/iconComp.png" alt="Computer Icon"></a>
+			<a href="?page=artwork#iconPen"><img class="homeIcons" src="img/iconPen.png" alt="Computer Icon"></a>
+			<a href="?page=artwork#iconPhoto"><img class="homeIcons" src="img/iconPhoto.png" alt="Computer Icon"></a>
+			<a href="?page=artwork#iconPaint"><img class="homeIcons" src="img/iconPaint.png" alt="Paintbrush Icon"></a>
+		</article>
+	</section>
 
 </div>

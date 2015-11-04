@@ -5,18 +5,18 @@
 }
 
 /***** Grid Set up *****/
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {width: 80px;}
+.col-2 {width: 160px;}
+.col-3 {width: 240px;}
+.col-4 {width: 320px;}
+.col-5 {width: 400px;}
+.col-6 {width: 480px;}
+.col-7 {width: 560px;}
+.col-8 {width: 640px;}
+.col-9 {width: 720px;}
+.col-10 {width: 800px;}
+.col-11 {width: 880px;}
+.col-12 {width: 960px;}
 
 [class*="col-"] {
     float: left;
@@ -30,6 +30,11 @@
 }
 /********************/
 
+body {
+	width: 960px;
+	margin: 0 auto;
+}
+
 
 a {
 	text-decoration: none;
@@ -41,7 +46,10 @@ a:visited {
 	color: #303030 ;
 }
 a:hover {
-	color: #909090 ;
+	color: #909090;
+}
+li.activePage {
+	border-right: solid 2px #fbb040;
 }
 @font-face {
 	font-family: myWebFont;
@@ -57,49 +65,214 @@ footer {
 }
 img {
 	max-width: 100%;
-}
-
-ul {
-	list-style: none;
-}
-#logo img {
 	max-height: 100%;
 }
-
-#topNav li {
-	position: relative;
-	top: 40px;
-	border-bottom: 3px solid #fbb040;
-}
-
-.contentWrap {
-	border-top: 2px solid #fbb040;
+ul {
+	list-style: none;
 }
 .btmContent {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-top: 2px solid #fbb040;
 }
+.btmContent p {
+	max-width: 100%;
+}
+
+/********* HEAHDER *********/
+div#navToggle {
+	display: none;
+	width: 320px;
+	float: left;
+	font-size: 28px;
+	border: 2px solid #fbb040;
+	border-radius: 7px;
+	text-align: center;
+}
+ul#topNav{
+	list-style: none;
+	float: left;
+	padding: 15px;
+	height: 160px;
+	border-left: 2px solid #fbb040;
+}
+ul#topNav li {
+	padding: 7px;
+}
+ul#topNav li.activePage {
+	border-right: 2px solid #fbb040;
+	background-color: #ccc;
+}
+
+#logo img {
+	max-height: 100%;
+}
+header {
+	clear: both;
+}
+.activePage a {
+	border: solid 3px black;
+}
+
+/******* FOOTER *********/
+
+footer p {
+	font-size: .75em;
+	float: right;
+	padding-top: 15px;
+}
+footer {
+	border-top: 2px solid #fbb040;
+}
+
+/********* Home Page ********/
+
+section.iconHouse {
+	width: 400px;
+	float: left;
+	padding: 15px;
+	margin-left: 20px;
+}
+section.iconHouse img {
+	padding: 15px;
+	width: 150px;
+	height: 150px;
+}
+
+div.contentWrap{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	/*border-top: 2px solid #fbb040;*/
+}
+
+/******* Artwork ***************/
+
+div.icon-row {
+	width:100%;
+}
+
+div.icon-row img {
+	display: block;
+	float: left;
+	width: 80px;
+	padding: 10px;
+}
+/* RESUME */
+div.icon-row div.artDivide {
+	width: 880px;
+	height: 40px;
+	border-bottom: 2px solid #fbb040;
+	float: right;
+}
+section.jobs article img {
+	border: 2px solid #ccc;
+	float: left;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.vertPaint li {
+	height: 600px;
+}
+
+
+
+/*ul {
+	list-style: none;
+}*/
+
+
+
+/*.contentWrap {
+	border-top: 2px solid #fbb040;
+}*/
+
 
 .resume li img {
 	border: 2px solid #ccc;
 	border-radius: 20px;
 	display: center;
 }
-header {
-	clear: both;
-}
-footer p {
-	font-size: .75em;
-}
-footer {
-	border-top: 2px solid #fbb040;
-}
 
-/******* Artwork ***************/
-.artDivide {
-	border-bottom: 2px solid #fbb040;
+
+@media only screen and (max-width: 960px) {
+	body {
+		width: 640px;
+	}
+	.landscape li{
+		width: 640px;
+	}
+	div .artDivide {
+		width: 560px;
+	}
+	.btmContent div {
+		width: 640px;
+	}
+	#mountains li {
+		width: 640px;
+	}
+	div.icon-row div.artDivide {
+		width: 560px;
+	}
+	ul#topNav {
+		display: block;
+	}
+
+	/*.artDivide p {
+		width: 640px;
+	}*/
 }
-.activePage a {
-	border: solid 3px black;
+@media only screen and (max-width: 640px) {
+	body {
+		width: 320px;
+	}
+	.landscape li{
+		width: 320px;
+	}
+	.btmContent div {
+		max-width: 100%;
+	}
+	#mountains li {
+		width: 320px;
+	}
+	div.icon-row div.artDivide {
+		width:240px;
+	}
+
+	div#navToggle {
+		display: block;
+	}
+
+	img#logo {
+		width: 320px;
+	}
+
+	ul#topNav {
+		display: none;
+		width: 320px;
+		border-left: none;
+		border-bottom: 2px solid #333;
+		border-top: 2px solid white;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		background-color: #777;
+	}
+	ul#topNav a:hover {
+		color: white;
+	}
+	
+	section.iconHouse img{
+		width: 100px;
+		height: 100px;
+	}
+	section.iconHouse {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	section.iconHouse article.iconMobile {
+	
+	}
+	/*.artDivide p {
+		width: 320px;
+	}*/
 }

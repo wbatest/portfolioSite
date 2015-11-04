@@ -1,19 +1,13 @@
 <div class="contentWrap">	
 	<div class="row resume">
-		<ul>
-			<li class="col-3"><img src="img/rmyc.png"></li>
-			<li class="col-3"><img src="img/ski-patrol.png"></li>
-			<li class="col-3"><img src="img/canyons.png"></li>
-			<li class="col-3"><img src="img/sava-tree.png"></li>
-		</ul>
-	</div>
+		<section class="jobs">
+			<article class="col-4"><img src="img/rmyc.png"></article>
+			<article class="col-4"><img src="img/ski-patrol.png"></article>
+			<article class="col-4"><img src="img/canyons.png"></article>
 
-	<div class="row resume">
-		<ul>
-			<li class="col-3"><a href="#"><img src="img/fire.png"></a></li>
-			<li class="col-3"><a href="#"><img src="img/painting.png"></a></li>
-			<li class="col-3"><a href="#"><img src="img/canyons.png"></a></li>
-			<li class="col-3"><a href="#"><img src="img/sava-tree.png"></a></li>
-		</ul>
+			<article class="col-4"><a href="#"><img src="img/fire.png"></a></article>
+			<article class="col-4"><a href="#"><img src="img/painting.png"></a></article>
+			<article class="col-4"><a href="#"><img src="img/sava-tree.png"></a></article>
+		</section>
 	</div>
 </div>
