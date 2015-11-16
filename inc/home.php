@@ -7,8 +7,8 @@
 <div class="row btmContent">
 
 	<section class="iconHouse">
-		<article class="iconMobile">
-			<a href="#"><img class="homeIcons" src="img/iconComp.png" alt="Computer Icon"></a>
+		<article class="iconMobile clearfix">
+			<a href="?page=designPortfolio"><img class="homeIcons" src="img/iconComp.png" alt="Computer Icon"></a>
 			<a href="?page=artwork#iconPen"><img class="homeIcons" src="img/iconPen.png" alt="Computer Icon"></a>
 			<a href="?page=artwork#iconPhoto"><img class="homeIcons" src="img/iconPhoto.png" alt="Computer Icon"></a>
 			<a href="?page=artwork#iconPaint"><img class="homeIcons" src="img/iconPaint.png" alt="Paintbrush Icon"></a>

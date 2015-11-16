@@ -14,7 +14,8 @@
 
 		<title>BT Designs - <?php echo $page; ?></title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 	</head>
 
 	<body>
