@@ -163,28 +163,35 @@ div.icon-row div.artDivide {
 }
 section.jobs article {
 	width: 290px;
+	margin: 10px;
+	display: block;
+	float: left;
 }
 section.jobs article img {
 	border: 2px solid #ccc;
 	padding: 15px;
 	border-radius: 15px;
 	height: 290px;
+	width: 290px;
 }
 
 .vertPaint li {
 	height: 600px;
 }
-
-.jobDesc {
+div.employ {
+	width: 478px;
+	float: left;
+	padding: 15px;
+}
+div.jobDesc {
 	border: 2px solid #ccc;
 	margin: 15px 0;
-	border-radius: 15px
+	border-radius: 15px;
+	background-color: #666;
+	color: white;
+	display: none;
 }
-.jobDesc p{
-	width: 450px;
-	float: left;
-	padding: 20px;
-}
+
 
 /*********** DESIGN ************/
 
@@ -235,6 +242,9 @@ section.design article img {
 	}
 	ul#topNav {
 		display: block;
+	}
+		div.employ {
+	width: 290px;
 	}
 
 	/*.artDivide p {
@@ -294,6 +304,16 @@ section.design article img {
 	section.iconHouse article.iconMobile a {
 		display: block;
 		float: left;
+	}
+	section.jobs article img {
+	border: 2px solid #ccc;
+	padding: 15px;
+	border-radius: 15px;
+	height: 320px;
+	width: 320px;
+	}
+	div.employ {
+	width: 290px;
 	}
 	/*.artDivide p {
 		width: 320px;
