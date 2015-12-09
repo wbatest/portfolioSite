@@ -1,7 +1,10 @@
 var windowState;
+var descVisible = false;
+var sliderWidth;
+var slideCount;
 
 $(document).ready(function() {
-	console.log("This is the file main.js speaking.");
+	//console.log("This is the file main.js speaking.");
 
 	$("body").on('click','#navToggle',function() {
 		navToggle();
@@ -11,15 +14,25 @@ $(document).ready(function() {
 		jobToggle($(this).data('job'));
 	});
 
+	$("body").on('click', '.slider img', function() {
+		sliderEngine();
+	});
+
+	if ($(".slider").length) {
+		sliderWidth = $(".slider").width();
+		slideCount = $(".slider img").length;
+		sliderSetUp();
+	}
+
 	getWindowState();
 	jobSort(windowState);
 
 });
 
 $(window).resize(function() {
-	console.log("RESIZE!");
+	//console.log("RESIZE!");
 	if ($(window).width() >= 640 ) {
-		console.log("GREATER!");
+		//console.log("GREATER!");
 		$("#topNav").css("display","block");
 	} else {
 		$("#topNav").css("display","none");
@@ -28,7 +41,7 @@ $(window).resize(function() {
 	var currentWindowState = windowState;
 	getWindowState();
 	if (currentWindowState != windowState) {
-		console.log("CHANGE!");
+		//console.log("CHANGE!");
 		jobSort(windowState);
 	}
 
@@ -42,27 +55,44 @@ function getWindowState() {
 	} else {
 		windowState = "desktop";
 	}
-	console.log(windowState);
+	//console.log(windowState);
 }
 
 function navToggle() {
-	console.log("This is the function navToggle() speaking.");
+	//console.log("This is the function navToggle() speaking.");
 	$("#topNav").stop().slideToggle();
 }
 
 function jobToggle(jobToToggle) {
-	console.log("This is the function jobToggle() speaking.");
-	console.log(jobToToggle);
-	$('.jobDesc[data-job="' + jobToToggle + '"]').stop().slideToggle();
+	//console.log("This is the function jobToggle() speaking.");
+	//console.log(jobToToggle);
+
+	if ($('.jobDesc[data-job="' + jobToToggle + '"]').hasClass("descVisible")) {
+		$('.jobDesc[data-job="' + jobToToggle + '"]').stop().slideToggle().removeClass("descVisible");
+		descVisible = false;
+	} else {
+
+		if (!descVisible) {
+			$('.jobDesc[data-job="' + jobToToggle + '"]').stop().slideToggle().addClass("descVisible");
+			descVisible = !descVisible;
+		} else {
+			$(".descVisible").stop().slideToggle().removeClass("descVisible");
+			$('.jobDesc[data-job="' + jobToToggle + '"]').stop().slideToggle().addClass("descVisible");
+		}
+
+	}
 }
 
 function jobSort(sortState) {
-	// if($(".buffer").length) {
-	// 	$.each($(".buffer")).remove();
-	// }
+	console.log("============");
+	$.each($(".buffer"), function() {
+		// console.log("TEST");
+		$(this).remove();
+	});
 	if (sortState == "mobile") {
 		$.each($(".jobDesc"), function() {
-			console.log($(this).data("job"));
+			//console.log($(this).data("job"));
+			console.log($(this).data("job"),descCount,columnCount);
 			$(this).insertAfter('article[data-job="' + $(this).data("job") + '"]');
 			$(this).before("<div class='buffer clearfix'></div>");
 		});
@@ -73,8 +103,12 @@ function jobSort(sortState) {
 		var descCount = 0;
 		$.each($(".jobDesc"), function() {
 			descCount++;
-			console.log($(this).data("job"));
-			$(this).insertAfter('article:nth-of-type('+ columnCount +')');
+			console.log($(this).data("job"),descCount,columnCount);
+			if (columnCount == 2 || columnCount == 4) {
+				$(this).insertBefore('article:nth-of-type('+ (columnCount + 1) +')');
+			} else {
+				$('section.jobs').append($(this));
+			}
 			$(this).before("<div class='buffer clearfix'></div>");
 			if (descCount == columnCount) {
 				columnCount = columnCount + 2;
@@ -88,8 +122,12 @@ function jobSort(sortState) {
 		var descCount = 0;
 		$.each($(".jobDesc"), function() {
 			descCount++;
-			console.log($(this).data("job"));
-			$(this).insertAfter('article:nth-of-type('+ columnCount +')');
+			console.log($(this).data("job"),descCount,columnCount);
+			if (columnCount == 3) {
+				$(this).insertBefore('article:nth-of-type('+ (columnCount + 1) +')');
+			} else {
+				$('section.jobs').append($(this));
+			}
 			$(this).before("<div class='buffer clearfix'></div>");
 			if (descCount == columnCount) {
 				columnCount = columnCount + 3;
@@ -97,6 +135,71 @@ function jobSort(sortState) {
 		});
 
 	}
+}
+
+function sliderSetUp() {
+	console.log("SLIDER!");
+	
+	
+	var imgLeft = 0;
+	console.log(slideCount,sliderWidth);
+
+	$.each($(".slider img"), function() {
+		console.log(imgLeft);
+		$(this).css("left",imgLeft);
+		imgLeft += sliderWidth;
+	});
+
+	$(".slider img:first-child").addClass("currentSlide");
+	$(".slider img:last-child").addClass("lastSlide");
+
+}
+
+function sliderEngine() {
+	console.log("MOVE!");
+	var slidesAnimated = 0;
+	$("body").off("click",".slider img");
+	$(".slider img").stop(true,false).animate({
+		left: "-=" + sliderWidth
+	}, 1000, function() {
+		slidesAnimated++;
+		console.log("DONE");
+		if (slidesAnimated == slideCount) {
+			shiftFirstSlide();
+		}
+	});
+}
+
+function shiftFirstSlide() {
+	console.log("SHIFT!");
+	var newSlide = $(".slider img.currentSlide");
+	var lastSlide = $(".slider img.lastSlide");
+
+	var newLeft = parseInt(lastSlide.css("left")) + sliderWidth;
+
+	if (newSlide.is(':last-child')) {
+		$(".slider img:first-child").addClass("currentSlide");
+	} else {
+		newSlide.next().addClass("currentSlide");
+	}
+
+	
+	newSlide.removeClass("currentSlide");
+	newSlide.addClass("lastSlide");
+	lastSlide.removeClass("lastSlide");
+
+	newSlide.css("left", newLeft);
+
+	$("body").on('click', '.slider img', function() {
+		sliderEngine();
+	});
+
+	// console.log(newLeft);
+	// $(newSlide).css("left",newLeft);
+	
+	// $(".slider").append(newSlide);
+	// $(".slider img:last-child").css("left", (newLeft + sliderWidth) + "px");
+	// $(".slider img:first-child").remove;
 }
 
 

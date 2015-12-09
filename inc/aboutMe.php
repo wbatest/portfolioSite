@@ -1,7 +1,8 @@
-<div class="row contentWrap">
-
-	<img class="col-12" src="img/seeMeSki.jpg">
-
+<div class="row contentWrap slider about">
+	<ul>
+		<li><img src="img/seeMeSki.jpg"></li>
+		<li><img src="img/libbyAndMe.jpg"></li>
+	</ul>
 </div>
 <div class="btmContent">
 	<div class="row">

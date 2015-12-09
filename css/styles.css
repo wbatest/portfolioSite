@@ -110,6 +110,25 @@ ul#topNav li.activePage {
 header {
 	clear: both;
 }
+div.icon article {	
+	display: block;
+	float: left;
+	background-size: 130px 130px;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+div.icon article img {
+	height: 160px;
+	width: 160px;
+	padding: 15px;
+}
+div.icon.hover a:hover img {
+	opacity: 0;
+}
+article[data-job="icon"] {
+	background-image: url('../img/BT_logo_back.png');
+}
+
 
 /******* FOOTER *********/
 
@@ -128,19 +147,74 @@ section.iconHouse {
 	width: 400px;
 	float: left;
 	padding: 15px;
-	margin-left: 20px;
 }
-section.iconHouse img {
+section.iconHouse article img {
 	padding: 15px;
 	width: 150px;
 	height: 150px;
 }
 
-div.contentWrap{
+div.contentWrap {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	/*border-top: 2px solid #fbb040;*/
 }
+section.iconHouse article a{
+	display: block;
+	float: left;
+	background-size: 120px 120px;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+div.home {
+	position: relative;
+	overflow: hidden;
+	height: 420px;
+	}
+.home img {
+	margin: 0;
+	position: absolute;
+	width: 960px;
+	height: 360px;
+}
+section.iconHouse article a.homeIcons:hover img {
+	opacity: 0;
+}
+article a[data-job="iconComp"] {
+	background-image: url('../img/iconComp_back.png');
+}
+article a[data-job="iconPen"] {
+	background-image: url('../img/iconPen_back.png');
+}
+article a[data-job="iconPhoto"] {
+	background-image: url('../img/iconPhoto_back.png');
+}
+article a[data-job="iconPaint"] {
+	background-image: url('../img/iconPaint_back.png');
+}
+/************ PHOTO SLIDER ***************/
+/*.slider {
+  width: 960px; 
+  height: 550px;
+  overflow: hidden;
+}
+  .slider > ul {
+    /* styled by JS to match the added width and height of all <li>’s */
+    /*position: relative;
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+ 
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+    .slider > ul > li {
+      float: left;
+      width: 960px; 
+      height: 550px;
+    }*/
+
 
 /******* Artwork ***************/
 
@@ -154,6 +228,9 @@ div.icon-row img {
 	width: 80px;
 	padding: 10px;
 }
+.vertPaint li {
+	height: 600px;
+}
 /************* RESUME **********/
 div.icon-row div.artDivide {
 	width: 880px;
@@ -162,30 +239,60 @@ div.icon-row div.artDivide {
 	float: right;
 }
 section.jobs article {
-	width: 290px;
 	margin: 10px;
 	display: block;
 	float: left;
+	border-radius: 15px;
+	border: 2px solid #ccc;
+	background-size: 266px 266px;
+    background-repeat: no-repeat;
+    background-position: center; 
 }
 section.jobs article img {
-	border: 2px solid #ccc;
+	
 	padding: 15px;
-	border-radius: 15px;
-	height: 290px;
-	width: 290px;
+	
+	height: 296px;
+	width: 296px;
 }
 
-.vertPaint li {
-	height: 600px;
+section.jobs.hover article:hover img {
+	opacity: 0;
 }
+
+article[data-job="rocky"] {
+	background-image: url('../img/rmyc_back.png');
+}
+article[data-job="canyons"] {
+	background-image: url('../img/ski-patrol_back.png');
+}
+article[data-job="canyons2"] {
+	background-image: url('../img/canyons_back.png');
+}
+article[data-job="miller"] {
+	background-image: url('../img/fire_back.png');
+}
+article[data-job="fitz"] {
+	background-image: url('../img/painting_back.png');
+}
+article[data-job="croix"] {
+	background-image: url('../img/sava-tree_back.png');
+}
+
+
 div.employ {
-	width: 478px;
+	width: 465px;
 	float: left;
 	padding: 15px;
 }
+div.employ h5 {
+	line-height: 2.3em;
+	border-top: 1px solid white;
+	margin-top: 5px
+}
 div.jobDesc {
 	border: 2px solid #ccc;
-	margin: 15px 0;
+	margin: 10px 10px;
 	border-radius: 15px;
 	background-color: #666;
 	color: white;
@@ -201,6 +308,9 @@ section.design article img {
 	padding: 15px;
 	border-radius: 15px;
 }
+article #dragon {
+	background-color: #666;
+}
 
 
 /*ul {
@@ -212,18 +322,60 @@ section.design article img {
 /*.contentWrap {
 	border-top: 2px solid #fbb040;
 }*/
-
-
 .resume li img {
 	border: 2px solid #ccc;
 	border-radius: 20px;
 	display: center;
 }
 
+/************* About Me *****************/
 
+div.about {
+	position: relative;
+	overflow: hidden;
+	height: 560px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+.about img {
+	margin: 0;
+	position: absolute;
+	width: 960px;
+	height: 540px;
+}
+/************** Tablet ***************/
 @media only screen and (max-width: 960px) {
 	body {
 		width: 640px;
+	}
+	
+
+	div.slider {
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		overflow: hidden;
+		height: 260px;
+	}
+	.slider img {
+		margin: 0;
+		position: absolute;
+		width: 640px;
+		height: 240px;
+	}
+	section.iconHouse article.iconMobile img{
+		width: 125px;
+		height: 125px;
+	}
+	div.about {
+	height: 380px;
+	}
+	.about img {
+		width: 640px;
+		height: 360px;
+	}
+	section.iconHouse article a{
+		background-size: 95px 95px;
 	}
 	.landscape li{
 		width: 640px;
@@ -251,9 +403,30 @@ section.design article img {
 		width: 640px;
 	}*/
 }
+
+/************** Mobile ***************/
 @media only screen and (max-width: 640px) {
 	body {
 		width: 320px;
+	}
+	div.contentWrap.slider {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	div.slider {
+		height: 140px;
+	}
+	.slider img {
+		width: 320px;
+		height: 120px;
+		margin:10px auto;
+	}
+	div.about {
+	height: 360px;
+	}
+	.about img {
+		width: 320px;
+		height: 240px;
 	}
 	.landscape li{
 		width: 320px;
@@ -289,8 +462,10 @@ section.design article img {
 	ul#topNav a {
 		color: white;
 	}
-
-	section.iconHouse img{
+	section.iconHouse article a{
+		background-size: 70px 70px;
+	}
+	section.iconHouse article.iconMobile img{
 		width: 100px;
 		height: 100px;
 	}
@@ -305,13 +480,22 @@ section.design article img {
 		display: block;
 		float: left;
 	}
+	div.icon article img {
+	height: 320px;
+	width: 320px;
+	padding: 15px;
+	}
+	div.icon article {	
+	background-size: 290px 290px;
+	}
+	/*
 	section.jobs article img {
 	border: 2px solid #ccc;
 	padding: 15px;
 	border-radius: 15px;
-	height: 320px;
-	width: 320px;
-	}
+	height: 296px;
+	width: px;
+	}*/
 	div.employ {
 	width: 290px;
 	}
@@ -319,6 +503,8 @@ section.design article img {
 		width: 320px;
 	}*/
 }
+/*********** End Mobile **************/
+
 
 .clearfix:after {
 	visibility: hidden;

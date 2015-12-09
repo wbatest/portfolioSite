@@ -1,10 +1,12 @@
 <header>
 
 <div class="row headerWrap">
-
-<a href="?page=home"><img class="col-2" id="logo" src="img/BT_logo.png" alt="BT Designs Logo"></a>
+		<div class="icon hover">
+				<article data-job="icon">
+				<a href="?page=home"><img class="col-2" id="logo" src="img/BT_logo.png" alt="BT Designs Logo"></a>
+				</article>
+		</div>
 	
-
 	<div id="navToggle">MENU</div>
 
 	<ul id="topNav">

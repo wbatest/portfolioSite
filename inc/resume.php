@@ -1,6 +1,6 @@
 <div class="contentWrap">	
 	<div class="row resume">
-		<section class="jobs">
+		<section class="jobs hover">
 			<article data-job="rocky"><img src="img/rmyc.png"></article>
 			<div class="jobDesc clearfix" data-job="rocky">
 
@@ -24,7 +24,7 @@
 				</div>
 				<div class="employ">
 					<p>
-						During this time period I was able to get skilled with a chainsaw in a short period of time. It was a major mental victory to go from being slightly terrified of this implement of destruction to being totally comfortable with it in my hands. During this time I reveled in working with people that lived a very different life than me up to that point, and I learned a great deal about how to interact with people I don’t agree with, especially when they are in the position of power.
+						The most rewarding job I ever expect to have. The pay is low, the work is hard, but the sense of purpose is strong nearly every day. You become at home in states of discomfort. Your co-workers become your family. The community is strong and something I will always be looking for again. My time on ski patrol set the bar for how I want to feel about my life and what I am doing on a daily basis.
 					</p>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 				</div>
 				<div class="employ">
 					<p>
-						During this time period I was able to get skilled with a chainsaw in a short period of time. It was a major mental victory to go from being slightly terrified of this implement of destruction to being totally comfortable with it in my hands. During this time I reveled in working with people that lived a very different life than me up to that point, and I learned a great deal about how to interact with people I don’t agree with, especially when they are in the position of power.
+						Seasonal towns can be difficult for employment. It takes time to get a year round gig in one location. After my first winter season in Park City I found myself on a path to year round employment at the ski resort. Thinning the woods during the summer and skiing them during the winter. I learned a great deal, but the largest lesson was that I was able to walk away from this ski bum dream to chase the love of my life.
 					</p>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="employ">
 					<p>
-						During this time period I was able to get skilled with a chainsaw in a short period of time. It was a major mental victory to go from being slightly terrified of this implement of destruction to being totally comfortable with it in my hands. During this time I reveled in working with people that lived a very different life than me up to that point, and I learned a great deal about how to interact with people I don’t agree with, especially when they are in the position of power.
+						To be given a chance you need to show that you are worth the shot. There is a competition for differentiation in most jobs. Working for a private company that gets contracted to state or federal forest fires, there is a hierarchy of crew quality. The federal crews had to be of a higher caliber, and there is a limit to new firefighters aloud on a crew. I have always thought the quality of an experience can be enhanced or diminished by those around you, so I made sure to get myself noticed by those that could enhance my experience.
 					</p>
 				</div>
 			</div>
